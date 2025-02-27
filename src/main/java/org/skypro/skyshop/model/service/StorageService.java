@@ -41,7 +41,7 @@ public class StorageService {
 
     private void testData() {
         SimpleProduct product1 = new SimpleProduct("сахар", UUID.randomUUID(), 700);
-        DiscountedProduct product2 = new DiscountedProduct("молоко", UUID.randomUUID(), 0, 11);
+        DiscountedProduct product2 = new DiscountedProduct("молоко", UUID.randomUUID(), 200, 11);
         FixPriceProduct product3 = new FixPriceProduct("кофе", UUID.randomUUID());
         SimpleProduct product4 = new SimpleProduct("конфеты", UUID.randomUUID(), 500);
         SimpleProduct product5 = new SimpleProduct("колбаса", UUID.randomUUID(), 600);
