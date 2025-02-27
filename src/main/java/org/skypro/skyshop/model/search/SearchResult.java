@@ -14,6 +14,8 @@ public class SearchResult {
     }
 
     public static SearchResult fromSearchable(Searchable searchable){
-        return new SearchResult(searchable.getId(), searchable.getStringRepresentation(), searchable.getSearchContent());
+        return new SearchResult(searchable.getId(), searchable.getStringRepresentation(),
+                searchable.getSearchContent());
     }
+
 }
