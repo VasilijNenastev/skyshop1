@@ -28,7 +28,7 @@ public class BasketService {
     public void addProduct(UUID id) {
         Optional<Product> product = storageService.getProductById(id);
         if (product.isEmpty()) throw new NoProductException();
-        basket.merge(id, 1, Integer ::sum);
+        basket.merge(id, 1, Integer::sum);
     }
 
     public UserBasket getUserBasket() {
