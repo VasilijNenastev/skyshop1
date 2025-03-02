@@ -11,7 +11,7 @@ public class DiscountedProduct extends Product {
 
     public DiscountedProduct(String nameProduct, UUID id, int basePrice, int percentageDiscount) {
         super(nameProduct, id);
-        if (basePrice < 0) {
+        if (basePrice <= 0) {
             throw new PriceException();
         }
         if (percentageDiscount < 0 || percentageDiscount > 100) {
