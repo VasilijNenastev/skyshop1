@@ -7,21 +7,17 @@ import org.skypro.skyshop.model.product.Product;
 import org.springframework.stereotype.Service;
 import org.springframework.web.context.annotation.SessionScope;
 
-import java.util.ArrayList;
-import java.util.Map;
-import java.util.Optional;
-import java.util.UUID;
+import java.util.*;
 
 
 @Service
 @SessionScope
 public class BasketService {
-    private final Map<UUID, Integer> basket;
+    private final Map<UUID, Integer> basket = new HashMap<>();
     private final StorageService storageService;
 
 
-    public BasketService(Map<UUID, Integer> basket, StorageService storageService) {
-        this.basket = basket;
+    public BasketService( StorageService storageService) {
         this.storageService = storageService;
     }
 
